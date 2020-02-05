@@ -1,0 +1,4 @@
+1) https://code-maven.com/flask-serve-static-files
+2) https://www.youtube.com/watch?v=Y2fMCxLz6wM
+3)https://machinelearningmastery.com/how-to-configure-image-data-augmentation-when-training-deep-learning-neural-networks/
+4)https://realpython.com/storing-images-in-python/
