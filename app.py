@@ -11,7 +11,7 @@ from flask import Flask, redirect, url_for, request, render_template
 from werkzeug.utils import secure_filename
 from gevent.pywsgi import WSGIServer
 
-from flask_pymongo import PyMongo
+
 
 from splinter import Browser
 from bs4 import BeautifulSoup
@@ -26,7 +26,7 @@ app = Flask(__name__)
 
 # Model saved with Keras model.save()
 #MODEL_PATH = os.path.join("models","keras_models", "model-mobilenet-RMSprop0.0002-001-0.930507-0.647776.h5")
-MODEL_PATH = os.path.join("models","keras_models", "model-mobilenet-RMSprop0.0002-007-0.984544-0.698516.h5")
+MODEL_PATH = os.path.join("models","keras_models", "model-mobilenet-RMSprop0.0002-008-0.995584-0.711503.h5")
 
 # Load your trained model
 model = load_model(MODEL_PATH)
@@ -46,9 +46,6 @@ def prepare_image(img_path):
     x = np.expand_dims(x, axis=0)
     return x
 
-# Use PyMongo to establish Mongo connection
-#mongo = PyMongo(app, uri="mongodb://localhost:27017/Food")
-#mongo.db.collection.remove( { } );
 
 @app.route("/", methods=["GET"])
 def Home():
@@ -56,18 +53,7 @@ def Home():
     #Food = mongo.db.collection.find_one()
     return render_template('Know_Before_You_Eat.html')
 
-@app.route("/About")    
-def About():    
-    return render_template("About.html")
-
-@app.route("/Model")    
-def Model():    
-    return render_template("Model.html")
     
-@app.route("/Recipe")    
-def Recipe():    
-    return render_template("Recipe.html")
-
 
 
 @app.route("/predict", methods=["GET", "POST"])
@@ -125,7 +111,7 @@ def upload():
             data="Shortcake#Strawberry_shortcake"
 
         path={'executable_path':'/usr/local/bin/chromedriver'}
-        browser=Browser('chrome',**path,headless=True)
+        browser=Browser('chrome',path,headless=True)
 
         if data=="tuna tartare":
             url="http://ahealthylifeforme.com/tuna-tartare-recipe/"
@@ -141,10 +127,11 @@ def upload():
             soup=BeautifulSoup(html,"html.parser")
             var=soup.select_one('div.mw-parser-output')
             description=var.select('p')
+            nutri=soup.select_one('table.infobox')
 
-        if (data=="greek salad" or data=="oysters" or data=="paella"):    
+        if (data=="greek salad" or data=="oysters" or data=="smoked scallop" or data=="paella"):    
             output=description[1].text
-        elif (data=="mussels" or data=="scallops"):
+        elif data=="mussels" :
             output=description[2].text
         elif data=="Salmon#As_food":
             output=description[3].text        
@@ -159,11 +146,6 @@ def upload():
         description = output
         browser.quit()
 
-
-
-        #Food_Data = {"food_nutrional_min":food_nutrional_min}
-
-        #mongo.db.collection.update({}, Food_Data, upsert=True)
         
         return "<center><i><h4>" + pred_label.title()+" </h4></i> "+"<b><h3>Probability</h3></b><h4>"+str(preds.max(axis=-1)[0]) + '\n' + "</h4><br><br><b><h4 class=\"desc\">" +\
         description + "</h4><br><br>" +\
@@ -171,7 +153,9 @@ def upload():
         "<h5><b>Nutrional Value - Min (kcal) &nbsp;: &nbsp;</b>" + food_nutrional_min + '\n' + "<br><br>" + \
         "<b>Nutrional Value - Max (kcal) &nbsp;: &nbsp;</b>" + food_nutrional_max + '\n' + "<br><br>" + \
         "<b> Avg Calories &nbsp;: &nbsp;</b>" + Calories + "<br><br>" + \
-        "<b> Unit &nbsp;: &nbsp;</b>" + Unit + '\n' + "</h5></center>"
+        "<b> Unit &nbsp;: &nbsp;</b>" + Unit + '\n' + "</h5></center> <br><br>" + \
+        "<div id=\"Recipe\" class=\"heading-section\"><h2 class=\"mb-4\"><span>Recipe - Cookbook </span></h2></div><hr></hr>" + \
+        str(nutri) 
         
 
 

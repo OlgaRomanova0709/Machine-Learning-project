@@ -46,7 +46,7 @@ $(document).ready(function () {
                 $('.loader').hide();
                 $('#result').fadeIn(600);
                 $('#result').html(' <h3> <center>Predicted Dish </center></h3>  ' + data);
-                console.log(data.split())
+                console.log(data.Unit)
                 console.log('Success!');
             },
         });
