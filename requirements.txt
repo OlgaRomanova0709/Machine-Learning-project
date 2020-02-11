@@ -9,5 +9,5 @@ Pillow==7.0.0
 splinter==0.13.0
 tensorflow==1.15.2
 Werkzeug==0.16.1
-gunicorn==19.0.0
+gunicorn==19.5.0
 requests
