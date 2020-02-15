@@ -47,5 +47,8 @@ https://en.wikipedia.org/wiki/
 5) Missing Link AI - Platform to Run deep learning experiments on hundreds of machines, on and off the cloud, manage huge data sets and gain unprecedented visibility into your experiments.
 https://missinglink.ai/
 
+Presentation: https://docs.google.com/presentation/d/1UvU7sMPkn2Y5I88bmdoH0Sog3SpyQeSPeVdtSZoHrDk/edit#slide=id.g6ea730b6b1_7_5
+
+
 
 
