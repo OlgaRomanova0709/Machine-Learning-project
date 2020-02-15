@@ -49,6 +49,22 @@ https://missinglink.ai/
 
 Presentation: https://docs.google.com/presentation/d/1UvU7sMPkn2Y5I88bmdoH0Sog3SpyQeSPeVdtSZoHrDk/edit#slide=id.g6ea730b6b1_7_5
 
+![pres1](Presentation_snapshots/1.png)
+![pres2](Presentation_snapshots/2.png)
+![pres3](Presentation_snapshots/3.png)
+![pres4](Presentation_snapshots/4.png)
+![pres5](Presentation_snapshots/5.png)
+![pres6](Presentation_snapshots/6.png)
+
+## <ins> Results </ins>
+1) After fine-tuning a pre-trained MobileNet model achieved about 99.03% Top-1 Accuracy on the Training set and about 73% accuracy on Valid & test data.
+2) After fine-tuning a pre-trained VGG16 model achieved about 98.03% Top-1 Accuracy on the Training set and about 70% accuracy on Valid & test data.
+3) Using KNN  Algorithm achieved at score:0.404 at K=3
+4) Using Random Forest Model achieved at score:0.2
 
 
+## <ins> Key TakeAways </ins>
+1) By the application of Various Machine Learning Algorithms K-Nearest Neighbour,Random Forest Classification and Deep Learning(CNN) Algorithms on the image classification is concluded that CNN is the best model for the image classification on our data set.
+2) In CNN pretrained models  Mobilenet model is the best in terms of both speed and accuracy on our dataset.
+3) MobileNet is the most light method and quickest way to implement transfer learning for CNN’s.
 
