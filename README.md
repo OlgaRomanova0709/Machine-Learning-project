@@ -47,6 +47,5 @@ https://en.wikipedia.org/wiki/
 5) Missing Link AI - Platform to Run deep learning experiments on hundreds of machines, on and off the cloud, manage huge data sets and gain unprecedented visibility into your experiments.
 https://missinglink.ai/
 
-6) Application Deployment - Google Cloud (Computing Engine by creating VM Instance) 
 
 
