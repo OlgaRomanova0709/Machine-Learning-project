@@ -20,14 +20,13 @@ import requests
 import os
 
 
-
 # Define a flask app
 app = Flask(__name__)
 
 # Model saved with Keras model.save()
 #MODEL_PATH = os.path.join("models","keras_models", "model-mobilenet-RMSprop0.0002-001-0.930507-0.647776.h5")
 MODEL_PATH = os.path.join("models","keras_models", "model-mobilenet-RMSprop0.0002-008-0.995584-0.711503.h5")
-
+                                              
 # Load your trained model
 model = load_model(MODEL_PATH)
 print("Model loaded successfully !! Check http://127.0.0.1:5000/")
@@ -111,7 +110,8 @@ def upload():
             data="Shortcake#Strawberry_shortcake"
 
         path={'executable_path':'/usr/local/bin/chromedriver'}
-        browser=Browser('chrome',path,headless=True)
+        browser=Browser('chrome',**path,headless=False)
+        # browser=Browser('chrome',path,headless=True)
 
         if data=="tuna tartare":
             url="http://ahealthylifeforme.com/tuna-tartare-recipe/"
