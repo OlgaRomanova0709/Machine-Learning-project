@@ -58,6 +58,6 @@ Presentation: https://docs.google.com/presentation/d/1UvU7sMPkn2Y5I88bmdoH0Sog3S
 
 
 ## <ins> Key TakeAways </ins>
-1) Through application of Various Machine Learning Algorithms - K-Nearest Neighbour, Random Forest Classification and Deep Learning(CNN) Algorithms for image classification we concluded that CNN is the best model for classification of images in our data set.
+1) Through application of Various Machine Learning Algorithms - K-Nearest Neighbors, Random Forest Classification and Deep Learning(CNN) Algorithms for image classification we concluded that CNN is the best model for classification of images in our data set.
 2) In CNN pretrained models  Mobilenet model is the best in terms of both speed and accuracy in our dataset.
 3) MobileNet is the best method and quickest way to implement transfer learning for CNN’s.
