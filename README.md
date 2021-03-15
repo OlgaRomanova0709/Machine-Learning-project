@@ -7,7 +7,7 @@ An Interactive web application for identifying food names based on the images, p
 ![Home Page Pic](KnowBeforeYouEat.png)
 
 ## <ins> Presentation Link </ins>
-https://docs.google.com/presentation/d/1UvU7sMPkn2Y5I88bmdoH0Sog3SpyQeSPeVdtSZoHrDk/edit#slide=id.g6ea730b6b1_7_5
+https://drive.google.com/file/d/1RufkM7jekyF-5DaBEeNuWt1R1k_Tdox1/view?usp=sharing
 
 ## <ins> Source Data </ins>
 
