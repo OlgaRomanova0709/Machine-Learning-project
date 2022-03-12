@@ -5,7 +5,7 @@ gevent==1.4.0
 Jinja2==2.11.0
 numpy==1.18.1
 pandas==0.25.3
-Pillow==7.0.0
+Pillow==9.0.1
 splinter==0.13.0
 tensorflow==1.15.2
 Werkzeug==0.16.1
