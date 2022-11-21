@@ -7,7 +7,7 @@ numpy==1.18.1
 pandas==0.25.3
 Pillow==7.0.0
 splinter==0.13.0
-tensorflow==1.15.2
+tensorflow==2.9.3
 Werkzeug==0.16.1
 gunicorn==19.0.0
 requests
